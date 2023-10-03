@@ -1,0 +1,27 @@
+/*Multiplication Table Generator: This C program takes an integer input n and generates a multiplication table of size n x n. It prints the table with proper formatting, including leading spaces for single-digit results*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+
+
+void main()
+{
+	int a,num;
+	scanf("%d", &a);
+	for (int  i = 1; i <= a; i++)
+	{
+		for ( int j = 1; j <= a; j++)
+		{
+			num = i * j;
+			if (num < 10)
+				printf("   %d ", num);
+			else
+				printf("  %d ", num);
+		}
+		printf("\n");
+	}
+	
+}

@@ -1,0 +1,33 @@
+/*Prime Factors Calculator: This C program takes an integer input num and calculates its prime factors. It iteratively divides the number by prime divisors, printing them separated by spaces until the number becomes 1*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+//#include <stdlib.h>
+
+void devideNum(int);
+
+void main()
+{
+	int num;
+	scanf("%d", &num);
+	devideNum(num);
+	return 0;
+}
+
+void devideNum(int num)
+{
+	
+	
+	int devisor = 2;
+	while (num != 1)
+	{
+		while (num % devisor == 0) {
+			printf("%d", devisor);
+			num /= devisor;
+			printf(" ");
+		}
+		devisor= devisor + 1;
+
+	}
+	
+}

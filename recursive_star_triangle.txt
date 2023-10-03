@@ -1,0 +1,33 @@
+/*Recursive Star Triangle: This C program takes an integer input n and recursively prints an inverted triangle of stars. It decrements n with each recursive call, forming a triangle with decreasing rows*/
+
+void printTriangle(int a);
+
+
+
+void main()
+{
+	int a, i;
+	printf("n=");
+	scanf("%d", &a);
+	printf("\n");
+	printTriangle(a);
+
+}
+
+
+void printTriangle(int a)
+{
+	if (a <= 0)
+		return;
+	else
+	{
+		printTriangle(a - 1);
+
+		for (int i = 0 ; i < a; i++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+
+}
